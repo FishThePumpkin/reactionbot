@@ -34,7 +34,7 @@ async def on_ready():
 async def on_message(message):
     #rachel
     author = message.author
-    if author.id == "251873428351483905" or "318366307169075201":               #318366307169075201
+    if author.id == "318366307169075201":               #318366307169075201
         allhearts = len(lsthearts) - 1 
         heart = randint(0, allhearts)
         return await client.add_reaction(message, lsthearts[heart])
