@@ -1,1 +1,1 @@
-worker: python tatsugotchibot.py
+worker: python reactionbot.py
