@@ -31,6 +31,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    #rachel
+    author = message.author
+    if author.id == "246437474463776769"
+        client.add_reaction(message, '❤')
     #chance
     chance = randint(1,15)
     if chance == 2:
