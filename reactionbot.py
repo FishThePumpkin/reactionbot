@@ -32,9 +32,8 @@ async def on_ready():
 @client.event
 async def on_message(message):
     #chance
-    chance = randint(1,7)
+    chance = randint(1,15)
     if chance == 2:
-        chance = randint(1,2)
         allemoji = len(lstemoji) - 1 
         emoji = randint(0, allemoji) 
         if message.content.find(':okay_hand:'):
