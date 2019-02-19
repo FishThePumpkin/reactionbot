@@ -37,7 +37,7 @@ async def on_message(message):
     if author.id == "246437474463776769":               #318366307169075201
         allhearts = len(lsthearts) - 1 
         heart = randint(0, allhearts)
-        return await client.add_reaction(message, heart)
+        return await client.add_reaction(message, hearts[heart])
     #chance
     chance = randint(1,15)
     if chance == 2:
