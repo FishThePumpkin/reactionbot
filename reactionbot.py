@@ -21,6 +21,7 @@ lstzzz = ['\U0001F634']
 lsttsun = ['448817502089379852']
 lstquestion = ['\U00002753']
 lsttoxic = ['547680967397998642']
+lstping = ['547683507690799114','547683506579439618','547683506625445888']
 
 async def change_status():
     await client.wait_until_ready()
@@ -62,6 +63,21 @@ async def on_message(message):
         if message.content.find(':okay_hand:'):
              for x in client.get_all_emojis():
                 if x.id == lsttoxic[toxic]:
+                    return await client.add_reaction(message, x)
+        #bot pinged
+    if 'bot' in message.content:
+        allping = len(lstping) - 1 
+        ping = randint(0, allping)
+        if message.content.find(':okay_hand:'):
+             for x in client.get_all_emojis():
+                if x.id == lstping[ping]:
+                    return await client.add_reaction(message, x)
+    if '<@547365819122712586>' in message.content:
+        allping = len(lstping) - 1 
+        ping = randint(0, allping)
+        if message.content.find(':okay_hand:'):
+             for x in client.get_all_emojis():
+                if x.id == lstping[ping]:
                     return await client.add_reaction(message, x)
     #rachel
     author = message.author
