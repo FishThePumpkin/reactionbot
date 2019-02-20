@@ -37,6 +37,19 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    #if 'schedaddle' in message.content:
+    #    msg = await client.send_message(message.channel, 'schedoodle your dick is now a noodle')
+    if 'wink' in message.content:
+        allwink = len(lstwink) - 1 
+        wink = randint(0, allwink)
+        return await client.add_reaction(message, lstwink[wink])
+    if 'baka' in message.content:
+        alltsun = len(lsttsun) - 1 
+        tsun = randint(0, alltsun)
+        if message.content.find(':okay_hand:'):
+             for x in client.get_all_emojis():
+                if x.id == lsttsun[tsun]:
+                    return await client.add_reaction(message, x)
     #rachel
     author = message.author
     if author.id == "318366307169075201":               #318366307169075201
@@ -52,19 +65,7 @@ async def on_message(message):
              for x in client.get_all_emojis():
                 if x.id == lstemoji[emoji]:
                     return await client.add_reaction(message, x)     
-    #if 'schedaddle' in message.content:
-    #    msg = await client.send_message(message.channel, 'schedoodle your dick is now a noodle')
-    if 'wink' in message.content:
-        allwink = len(lstwink) - 1 
-        wink = randint(0, allwink)
-        return await client.add_reaction(message, lstwink[wink])
-    if 'baka' in message.content:
-        alltsun = len(lsttsun) - 1 
-        tsun = randint(0, alltsun)
-        if message.content.find(':okay_hand:'):
-             for x in client.get_all_emojis():
-                if x.id == lsttsun[tsun]:
-                    return await client.add_reaction(message, x)
+    
 
 @client.command()
 async def ping():
