@@ -48,7 +48,7 @@ async def on_message(message):
                 if x.id == lstemoji[emoji]:
                     return await client.add_reaction(message, x)     
     if 'schedaddle' in message.content:
-        return await client.say(message.channel, 'schedoodle your dick is now a noodle')
+        msg = await client.send_message(message.channel, 'schedoodle your dick is now a noodle')
     
 
 @client.command()
