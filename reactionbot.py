@@ -18,6 +18,7 @@ lstoops = ['\U0001F605']
 lstwink = ['\U0001F609','\U0001F61C','\U0001F61B','\U0001F635']
 lstthink = ['\U0001F928','\U0001F914','\U0001F636','\U0001F60F','\U0001F62C']
 lstzzz = ['\U0001F634']
+lsttsun = ['448817502089379852']
 
 async def change_status():
     await client.wait_until_ready()
@@ -57,6 +58,10 @@ async def on_message(message):
         allwink = len(lstwink) - 1 
         wink = randint(0, allwink)
         return await client.add_reaction(message, lstwink[wink])
+    if 'baka' in message.content:
+        alltsun = len(lsttsun) - 1 
+        wink = randint(0, lsttsun)
+        return await client.add_reaction(message, lsttsun[tsun])
 
 @client.command()
 async def ping():
