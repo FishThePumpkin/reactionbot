@@ -65,7 +65,7 @@ async def on_message(message):
                 if x.id == lsttoxic[toxic]:
                     return await client.add_reaction(message, x)
         #bot pinged
-    if 'bot' in message.content:
+    if 'react' in message.content:
         allping = len(lstping) - 1 
         ping = randint(0, allping)
         if message.content.find(':okay_hand:'):
