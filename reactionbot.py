@@ -60,7 +60,7 @@ async def on_message(message):
         return await client.add_reaction(message, lstwink[wink])
     if 'baka' in message.content:
         alltsun = len(lsttsun) - 1 
-        wink = randint(0, alltsun)
+        tsun = randint(0, alltsun)
         if message.content.find(':okay_hand:'):
              for x in client.get_all_emojis():
                 if x.id == lsttsun[tsun]:
