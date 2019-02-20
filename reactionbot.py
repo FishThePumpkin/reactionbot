@@ -19,7 +19,7 @@ lstwink = ['\U0001F609','\U0001F61C','\U0001F61B','\U0001F635']
 lstthink = ['\U0001F928','\U0001F914','\U0001F636','\U0001F60F','\U0001F62C']
 lstzzz = ['\U0001F634']
 lsttsun = ['448817502089379852']
-lstquestion = ['547678848880214016']
+lstquestion = ['\U00002753']
 
 async def change_status():
     await client.wait_until_ready()
@@ -52,7 +52,7 @@ async def on_message(message):
                 if x.id == lsttsun[tsun]:
                     return await client.add_reaction(message, x)
     if message.content == '?':
-        addquestion = len(lstquestion) - 1 
+        allquestion = len(lstquestion) - 1 
         question = randint(0, allquestion)
         return await client.add_reaction(message, lstquestion[question])
     #rachel
