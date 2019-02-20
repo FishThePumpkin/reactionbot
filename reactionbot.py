@@ -61,7 +61,10 @@ async def on_message(message):
     if 'baka' in message.content:
         alltsun = len(lsttsun) - 1 
         wink = randint(0, lsttsun)
-        return await client.add_reaction(message, lsttsun[tsun])
+        if message.content.find(':okay_hand:'):
+             for x in client.get_all_emojis():
+                if x.id == lsttsun[tsun]:
+                    return await client.add_reaction(message, x)
 
 @client.command()
 async def ping():
