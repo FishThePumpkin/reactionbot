@@ -47,9 +47,12 @@ async def on_message(message):
              for x in client.get_all_emojis():
                 if x.id == lstemoji[emoji]:
                     return await client.add_reaction(message, x)     
-    if 'schedaddle' in message.content:
-        msg = await client.send_message(message.channel, 'schedoodle your dick is now a noodle')
-    
+    #if 'schedaddle' in message.content:
+    #    msg = await client.send_message(message.channel, 'schedoodle your dick is now a noodle')
+    if 'wink' in message.content:
+        allwink = len(lstwink) - 1 
+        wink = randint(0, allwink)
+        return await client.add_reaction(message, lstwink[wink])
 
 @client.command()
 async def ping():
