@@ -20,6 +20,7 @@ lstthink = ['\U0001F928','\U0001F914','\U0001F636','\U0001F60F','\U0001F62C']
 lstzzz = ['\U0001F634']
 lsttsun = ['448817502089379852']
 lstquestion = ['\U00002753']
+lsttoxic = ['547680967397998642']
 
 async def change_status():
     await client.wait_until_ready()
@@ -55,6 +56,13 @@ async def on_message(message):
         allquestion = len(lstquestion) - 1 
         question = randint(0, allquestion)
         return await client.add_reaction(message, lstquestion[question])
+    if 'toxic' in message.content:
+        alltoxic = len(lsttoxic) - 1 
+        toxic = randint(0, alltoxic)
+        if message.content.find(':okay_hand:'):
+             for x in client.get_all_emojis():
+                if x.id == lsttoxic[toxic]:
+                    return await client.add_reaction(message, x)
     #rachel
     author = message.author
     if author.id == "318366307169075201":               #318366307169075201
