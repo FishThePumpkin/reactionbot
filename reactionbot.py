@@ -47,7 +47,8 @@ async def on_message(message):
              for x in client.get_all_emojis():
                 if x.id == lstemoji[emoji]:
                     return await client.add_reaction(message, x)     
-    
+    if 'xd' in message.content:
+        await client.say('XD HAHAHAHAHAHA')
     
 
 @client.command()
