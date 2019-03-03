@@ -22,6 +22,7 @@ lsttsun = ['448817502089379852']
 lstquestion = ['\U00002753']
 lsttoxic = ['547680967397998642']
 lstping = ['547683507690799114','547683506579439618','547683506625445888']
+lstdash = ['551731555597549588']
 
 async def change_status():
     await client.wait_until_ready()
@@ -80,6 +81,14 @@ async def on_message(message):
         if message.content.find(':okay_hand:'):
              for x in client.get_all_emojis():
                 if x.id == lstping[ping]:
+                    return await client.add_reaction(message, x)
+                
+    if ':GWsocksThonkeryPing:' in message.content:
+        alldash = len(lstdash) - 1 
+        dash = randint(0, alldash)
+        if message.content.find(':okay_hand:'):
+             for x in client.get_all_emojis():
+                if x.id == lstdash[dash]:
                     return await client.add_reaction(message, x)
     #rachel
     author = message.author
