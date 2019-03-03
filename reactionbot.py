@@ -82,7 +82,13 @@ async def on_message(message):
              for x in client.get_all_emojis():
                 if x.id == lstping[ping]:
                     return await client.add_reaction(message, x)
-                
+    if ':GWsocksBlobAngeryPing:' in message.content:
+        alldash = len(lstdash) - 1 
+        dash = randint(0, alldash)
+        if message.content.find(':okay_hand:'):
+             for x in client.get_all_emojis():
+                if x.id == lstdash[dash]:
+                    return await client.add_reaction(message, x)
     if ':GWsocksThonkeryPing:' in message.content:
         alldash = len(lstdash) - 1 
         dash = randint(0, alldash)
