@@ -46,6 +46,8 @@ async def on_message(message):
         allwink = len(lstwink) - 1 
         wink = randint(0, allwink)
         return await client.add_reaction(message, lstwink[wink])
+    if message.content == 'hmmmmm':
+        msg = await client.send_message(message.channel, 'https://cdn.discordapp.com/attachments/282016838173327370/551697317305253928/image0.jpg')
     if 'baka' in message.content:
         alltsun = len(lsttsun) - 1 
         tsun = randint(0, alltsun)
