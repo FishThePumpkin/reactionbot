@@ -116,8 +116,9 @@ async def on_message(message):
                 
     if 'gay' in message.content:
         if author.id == "290419231734890497":
-            msg = await client.send_message(message.channel, str(jessiegay))
             jessiegay += 1
+            msg = await client.send_message(message.channel, "Jessie has said gay " + str(jessiegay) + "times")
+            
     
 
 @client.command()
