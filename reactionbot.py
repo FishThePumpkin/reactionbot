@@ -124,8 +124,13 @@ async def on_message(message):
         heart = randint(0, allhearts)
         return await client.add_reaction(message, lsthearts[heart])
     elif 'gay' in message.content:
-        if author.id == "246437474463776769":                    #290419231734890497
-            jessie = jessie + 1
+        if message.author.id == "246437474463776769":                  #290419231734890497
+            global jessie
+            jessie += 1
+            #print('gay')
+            #await client.send_message(message.channel, 'Jessie said gay')
+    elif message.content == 'jessie is gay':
+            await client.send_message(message.channel, "Jessie has said gay %d times" % jessie) 
     
     if chance == 2: 
         emoji = randint(0, allemoji) 
