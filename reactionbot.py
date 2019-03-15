@@ -35,7 +35,7 @@ async def help(ctx):
 
 @client.command()
 async def jessiegay():
-    await client.say(str(jessiegay))
+    await client.say(jessiegay)
 
 
 
