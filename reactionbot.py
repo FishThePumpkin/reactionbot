@@ -142,7 +142,7 @@ async def help(ctx):
 
 @client.command()
 async def jessiegay():
-    msg = await client.send_message(message.channel, jessiegay)
+    msg = await client.send_message(message.channel, str(jessiegay))
 
 
 
