@@ -23,6 +23,7 @@ lstquestion = ['\U00002753']
 lsttoxic = ['547680967397998642']
 lstping = ['547683507690799114','547683506579439618','547683506625445888']
 lstdash = ['551731555597549588']
+jessiegay = 0
 
 async def change_status():
     await client.wait_until_ready()
@@ -43,6 +44,7 @@ async def on_ready():
 async def on_message(message):
     #if 'schedaddle' in message.content:
     #    msg = await client.send_message(message.channel, 'schedoodle your dick is now a noodle')
+    
     if 'wink' in message.content:
         allwink = len(lstwink) - 1 
         wink = randint(0, allwink)
@@ -111,6 +113,10 @@ async def on_message(message):
              for x in client.get_all_emojis():
                 if x.id == lstemoji[emoji]:
                     return await client.add_reaction(message, x)     
+                
+    if 'gay' in message.content:
+        if author.id == "290419231734890497":
+            jessiegay += 1
     
 
 @client.command()
@@ -134,7 +140,9 @@ async def help(ctx):
     await client.say(embed=embed) #send_message(author, embed=embed)
 
 
-
+@client.command()
+async def jessiegay():
+    msg = await client.send_message(message.channel, jessiegay)
 
 
 
