@@ -11,6 +11,7 @@ from discord.utils import get
 client = commands.Bot(command_prefix = "-!")
 client.remove_command('help')
 status = ['Rocky', 'x', 'Rachel']
+jessiegay = 0
 
 @client.command()
 async def ping():
