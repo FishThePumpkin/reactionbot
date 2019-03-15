@@ -49,5 +49,5 @@ async def say(*args):
     
     
     
-client.loop.create_task(change_status())
+
 client.run(os.environ['BOT_TOKEN'])    
