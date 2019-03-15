@@ -35,7 +35,7 @@ async def help(ctx):
 
 @client.command()
 async def jessiegay():
-    await client.send_message(message.channel, jessiegay)
+    await client.say("Jessie has said gay %i times" % jessiegay)
 
 
 
