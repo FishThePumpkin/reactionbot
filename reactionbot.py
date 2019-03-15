@@ -125,7 +125,7 @@ async def on_message(message):
         return await client.add_reaction(message, lsthearts[heart])
     elif 'gay' in message.content:
         if author.id == "246437474463776769":                    #290419231734890497
-            global jessie += 1
+            jessie += 1
     
     if chance == 2: 
         emoji = randint(0, allemoji) 
