@@ -11,7 +11,7 @@ from discord.utils import get
 client = commands.Bot(command_prefix = "-!")
 client.remove_command('help')
 status = ['Rocky', 'x', 'Rachel']
-jessiegay = 0
+jessie = 0
 
 @client.command()
 async def ping():
@@ -36,7 +36,7 @@ async def help(ctx):
 
 @client.command()
 async def jessiegay():
-    await client.say("Jessie has said gay %i times" % jessiegay)
+    await client.say("Jessie has said gay %d times" % jessie)
 
 
 
