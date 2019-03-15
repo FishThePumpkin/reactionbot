@@ -44,7 +44,7 @@ async def change_status():
         await client.change_presence(game=discord.Game(name=current_status))
         await asyncio.sleep(2)
        
-@client.event
+@client.event()
 async def on_message(message):
     author = message.author
     chance = randint(1,7)
