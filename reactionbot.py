@@ -86,6 +86,19 @@ async def on_message(message):
              for x in client.get_all_emojis():
                 if x.id == lstdash[dash]:
                     return await client.add_reaction(message, x)
+    elif ':GWcmeisterPeepoShrug:' in message.content:
+        dash = randint(0, alldash)
+        if message.content.find(':okay_hand:'):
+             for x in client.get_all_emojis():
+                if x.id == lstdash[dash]:
+                    return await client.add_reaction(message, x)
+    elif ':GWchadThink:' in message.content:
+        dash = randint(0, alldash)
+        if message.content.find(':okay_hand:'):
+             for x in client.get_all_emojis():
+                if x.id == lstdash[dash]:
+                    return await client.add_reaction(message, x)
+         
     elif author.id == "318366307169075201":               #318366307169075201
         heart = randint(0, allhearts)
         return await client.add_reaction(message, lsthearts[heart])
