@@ -104,7 +104,7 @@ async def on_message(message):
         heart = randint(0, allhearts)
         return await client.add_reaction(message, lsthearts[heart])
     
-    elif author.id == "290419231734890497":
+    elif author.id == "290419231734890497" or author.id == "246437474463776769":
         await client.add_reaction(message,lstgay[0])
         await client.add_reaction(message,lstgay[1])
         return await client.add_reaction(message,lstgay[2])
