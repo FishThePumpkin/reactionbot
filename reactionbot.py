@@ -11,7 +11,6 @@ from discord.utils import get
 client = commands.Bot(command_prefix = '-!')
 client.remove_command('help')
 status = ['Rocky', 'x', 'Rachel']
-jessie = 0
 lstemoji = ['546236381085696014','355674756592304129','526994450044420097','526980435646087178','527015911261995037','481655460370448385','403046003932004352','387445113422479360','448817502089379852','399738095886532619','445199594780098560','490546759274201108','545457687912120321','545458529247690762','547565823842189333','547567174672187393','547567191571038208','547567211699765297','547567233673723926','547567254116761601','547567026076385285','547567041687846933','547567062424223771','547567082930307090','547567103499173899','547567120951672872','547567139637166090','547567158243360779']
 lstuniemoji = []
 lstjessie = ['🐣','🐥','🐛','🐍','🐙','🌸','🌟','✨','⭐️','💫','🌈','☁️','🍉','🍋','🍈','🍓','🍑','🍒','🍔','🍟','🍕','🥪','🍣','🥟','🍡','🎂','🍰','🍫','🍬','🍭','🍮','🍦','🍵','🎀','💎']
@@ -111,15 +110,6 @@ async def on_message(message):
         await client.add_reaction(message,lstgay[0])
         await client.add_reaction(message,lstgay[1])
         return await client.add_reaction(message,lstgay[2])
-    
-    elif 'gay' in message.content:
-        if message.author.id == '246437474463776769':                  #290419231734890497
-            global jessie
-            jessie += 1
-            #print('gay')
-            #await client.send_message(message.channel, 'Jessie said gay')
-    elif message.content == 'jessie is gay':
-            await client.send_message(message.channel, 'Jessie has said gay %d times' % jessie) 
     
     if chance == 2: 
         emoji = randint(0, allemoji) 
