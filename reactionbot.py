@@ -110,7 +110,8 @@ async def on_message(message):
         await client.add_reaction(message,lstjessie[jessie])
         await client.add_reaction(message,lstgay[0])
         await client.add_reaction(message,lstgay[1])
-        return await client.add_reaction(message,lstgay[2])
+        await client.add_reaction(message,lstgay[2])
+        return await client.add_reaction(message,lstjessie[jessie])
     
     if chance == 2: 
         emoji = randint(0, allemoji) 
