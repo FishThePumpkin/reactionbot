@@ -99,7 +99,7 @@ async def on_message(message):
                 if x.id == lstdash[dash]:
                     return await client.add_reaction(message, x)
          
-    elif author.id == "318366307169075201":               #318366307169075201
+    elif author.id == "318366307169075201" or author.id == "328345368494342155":               #318366307169075201
         heart = randint(0, allhearts)
         return await client.add_reaction(message, lsthearts[heart])
     elif 'gay' in message.content:
