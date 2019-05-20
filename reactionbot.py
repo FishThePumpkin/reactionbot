@@ -33,6 +33,7 @@ allping = len(lstping) - 1
 alldash = len(lstdash) - 1 
 allhearts = len(lsthearts) - 1 
 allemoji = len(lstemoji) - 1 
+alljessie = len(lstjessie) - 1
 
 
 
@@ -106,7 +107,7 @@ async def on_message(message):
     
     elif author.id == "290419231734890497":
         jessie = randint(0,lstjessie)
-        await client.add_reaction(message,lstjessie(jessie))
+        await client.add_reaction(message,alljessie)
         await client.add_reaction(message,lstgay[0])
         await client.add_reaction(message,lstgay[1])
         return await client.add_reaction(message,lstgay[2])
