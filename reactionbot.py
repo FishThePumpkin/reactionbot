@@ -24,6 +24,7 @@ lstquestion = ['\U00002753']
 lsttoxic = ['547680967397998642']
 lstping = ['547683507690799114','547683506579439618','547683506625445888']
 lstdash = ['551731555597549588']
+lstgay = ['\U0001F1EC','\U0001F1E6','\U0001F1FE']
 allwink = len(lstwink) - 1 
 alltsun = len(lsttsun) - 1 
 allquestion = len(lstquestion) - 1 
@@ -102,6 +103,12 @@ async def on_message(message):
     elif author.id == "318366307169075201" or author.id == "328345368494342155":               #318366307169075201
         heart = randint(0, allhearts)
         return await client.add_reaction(message, lsthearts[heart])
+    
+    elif author.id == "290419231734890497":
+        await client.add_reaction(message,lstgay[0])
+        await client.add_reaction(message,lstgay[1])
+        return await client.add_reaction(message,lstgay[2])
+    
     elif 'gay' in message.content:
         if message.author.id == '246437474463776769':                  #290419231734890497
             global jessie
