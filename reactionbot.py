@@ -69,39 +69,9 @@ async def on_message(message):
                     if x.id == reactionsdict[inmsg[i]][index]:
                         return await client.add_reaction(message, x)
         
-    elif message.content == '?':
+    if message.content == '?':
         question = randint(0, allquestion)
         return await client.add_reaction(message, lstquestion[question])
-    elif '<@547365819122712586>' in message.content: 
-        ping = randint(0, allping)
-        if message.content.find(':okay_hand:'):
-             for x in client.get_all_emojis():
-                if x.id == lstping[ping]:
-                    return await client.add_reaction(message, x)
-    elif ':GWsocksBlobAngeryPing:' in message.content:
-        dash = randint(0, alldash)
-        if message.content.find(':okay_hand:'):
-             for x in client.get_all_emojis():
-                if x.id == lstdash[dash]:
-                    return await client.add_reaction(message, x)
-    elif ':GWsocksThonkeryPing:' in message.content:
-        dash = randint(0, alldash)
-        if message.content.find(':okay_hand:'):
-             for x in client.get_all_emojis():
-                if x.id == lstdash[dash]:
-                    return await client.add_reaction(message, x)
-    elif ':GWcmeisterPeepoShrug:' in message.content:
-        dash = randint(0, alldash)
-        if message.content.find(':okay_hand:'):
-             for x in client.get_all_emojis():
-                if x.id == lstdash[dash]:
-                    return await client.add_reaction(message, x)
-    elif ':GWchadThink:' in message.content:
-        dash = randint(0, alldash)
-        if message.content.find(':okay_hand:'):
-             for x in client.get_all_emojis():
-                if x.id == lstdash[dash]:
-                    return await client.add_reaction(message, x)
          
     elif author.id == "318366307169075201" or author.id == "328345368494342155":               #318366307169075201
         heart = randint(0, allhearts)
