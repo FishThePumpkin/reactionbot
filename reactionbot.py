@@ -51,7 +51,7 @@ inmsg = {
     ":GWsocksBlobAngeryPing:": "lstdash",
     ":GWsocksThonkeryPing:": "lstdash",
     ":GWcmeisterPeepoShrug:": "lstdash",
-    ":GWchadThink:", "lstdash"
+    ":GWchadThink:": "lstdash"
 }
 
 #lstemoji = lstjessie = lsthearts = lstoops = lstwink = lstthink = lstzzz = lsttsun = lstquestion = lsttoxic = lstping = lstdash = lstgay 
