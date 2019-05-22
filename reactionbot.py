@@ -40,13 +40,18 @@ allhearts = len(lsthearts) - 1
 allemoji = len(lstemoji) - 1 
 alljessie = len(lstjessie) - 1
 
-reactions = ["wink","baka","toxic","<@547365819122712586>",":GWsocksBlobAngeryPing:"
+reactions = ["wink","baka","toxic","<@547365819122712586>",":GWsocksBlobAngeryPing:",":GWsocksThonkeryPing:",":GWcmeisterPeepoShrug:",":GWchadThink:"]
 
 inmsg = {
     "wink": "lstwink",
     "baka": "lsttsun",
     #"?": "lstquestion",
-    "toxic":
+    "toxic": "lsttoxic",
+    "<@547365819122712586>": "lstping",
+    ":GWsocksBlobAngeryPing:": "lstdash",
+    ":GWsocksThonkeryPing:": "lstdash",
+    ":GWcmeisterPeepoShrug:", "lstdash",
+    ":GWchadThink:", "lstdash"
 }
 
 #lstemoji = lstjessie = lsthearts = lstoops = lstwink = lstthink = lstzzz = lsttsun = lstquestion = lsttoxic = lstping = lstdash = lstgay 
@@ -77,6 +82,18 @@ async def change_status():
 async def on_message(message):
     author = message.author
     chance = randint(1,7)
+    mess = message.content.lower()
+    for i in reactions:
+        if i in mess:
+            index = randint(0,len(reactionsdict[inmsg[i]]))
+            try:
+                return await client.add_reaction(message,reactionsdict[inmsg[i]])
+            except:
+                if message.content.find('EMOJI_NAME'):
+                 for x in client.get_all_emojis():
+                    if x.id == reactionsdict[inmsg[i]][index]:
+                        return await client.add_reaction(message, x)
+        
     if 'wink' in message.content:
         wink = randint(0, allwink)
         return await client.add_reaction(message, lstwink[wink])
@@ -89,12 +106,6 @@ async def on_message(message):
     elif message.content == '?':
         question = randint(0, allquestion)
         return await client.add_reaction(message, lstquestion[question])
-    elif 'toxic' in message.content:
-        toxic = randint(0, alltoxic)
-        if message.content.find('EMOJI_NAME'):
-             for x in client.get_all_emojis():
-                if x.id == lsttoxic[toxic]:
-                    return await client.add_reaction(message, x)
     elif '<@547365819122712586>' in message.content: 
         ping = randint(0, allping)
         if message.content.find(':okay_hand:'):
