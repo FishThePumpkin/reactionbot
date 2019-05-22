@@ -34,10 +34,10 @@ async def on_message(message):
     mess = message.content.lower()
     
     if chance == 2: 
-        await get_reaction(message,"123emoji")
+        return await get_reaction(message,"123emoji")
              
     if author.id == IDs["Rachel"] or author.id == IDs["Trung"]:               #318366307169075201
-        await get_reaction(message,"123hearts")
+        return await get_reaction(message,"123hearts")
     
     if author.id == IDs["Jessie"]:
         await get_reaction(message,"123jessie")
@@ -48,21 +48,21 @@ async def on_message(message):
     
     for i in inmsg:
         if message.content == "?":
-            await get_reaction(message,"?")
+            return await get_reaction(message,"?")
         elif i in mess:
-            await get_reaction(message,i)
+            return await get_reaction(message,i)
     
 
 
 async def get_reaction(message,i):
     index = randint(0,len(reactionsdict[inmsg[i]]) - 1)
     try:
-       return await client.add_reaction(message,reactionsdict[inmsg[i]])
+       await client.add_reaction(message,reactionsdict[inmsg[i]])
     except:
         if message.content.find('EMOJI_NAME'):
             for x in client.get_all_emojis():
                 if x.id == reactionsdict[inmsg[i]][index]:
-                    return await client.add_reaction(message, x)
+                    await client.add_reaction(message, x)
         
         
 @client.command()
