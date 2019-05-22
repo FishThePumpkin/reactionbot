@@ -57,7 +57,7 @@ async def on_message(message):
 async def get_reaction(message,i):
     index = randint(0,len(reactionsdict[inmsg[i]]) - 1)
     try:
-       await client.add_reaction(message,reactionsdict[inmsg[i]])
+       await client.add_reaction(message,reactionsdict[inmsg[i]][index])
     except:
         if message.content.find('EMOJI_NAME'):
             for x in client.get_all_emojis():
