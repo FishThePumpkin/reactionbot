@@ -17,7 +17,7 @@ reactionsdict = {
 inmsg = {
     "wink": "lstwink",
     "baka": "lsttsun",
-    "?": "lstquestion",
+    #"?": "lstquestion",
     "toxic": "lsttoxic",
     "<@547365819122712586>": "lstping",
     ":GWsocksBlobAngeryPing:": "lstdash",
