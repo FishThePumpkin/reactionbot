@@ -46,9 +46,9 @@ alljessie = len(lstjessie) - 1
 namelst = ["lstemoji","lstjessie","lsthearts","lstoops","lstwink","lstthink","lstzzz","lsttsun","lstquestion","lsttoxic","lstping","lstdash","lstgay"]
 #alllst = [allemoji,alljessie,allhearts,alloops,allwink,allthink,allzzz,alltsun,allquestion,alltoxic,allping,alldash,allgay]
 
-for i in lstlst:
-    lstlst[i] = reactionsdict[namelst[i]]
-    alllst[i] = len(lstlst[i]) - 1
+#for i in lstlst:
+ #   lstlst[i] = reactionsdict[namelst[i]]
+  #  alllst[i] = len(lstlst[i]) - 1
 
 async def change_status():
     await client.wait_until_ready()
