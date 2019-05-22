@@ -8,7 +8,7 @@ from random import *
 import os
 from discord.utils import get
 
-import lists.py
+import lists
 
 client = commands.Bot(command_prefix = '-!')
 client.remove_command('help')
