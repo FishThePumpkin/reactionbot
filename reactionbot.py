@@ -9,7 +9,8 @@ import os
 from discord.utils import get
 
 import lists
-from lists import 
+from lists import reactionsdict
+from lists import inmsg
 import permissions
 from permissions import IDs
 
