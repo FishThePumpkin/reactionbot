@@ -70,31 +70,7 @@ async def ping():
     await client.say('Pong!')
 
 
-@client.command(pass_context=True)
-async def help(ctx):
-
-    embed = discord.Embed(
-        color = discord.Color.orange()
-    )
-
-    embed.set_author(name='Help')
-    embed.add_field(name='**-ping**', value='Returns Pong!', inline=False)
-    
-    embed.add_field(name='**-say <string>**', value='Tells the bot to say something.', inline=False)
-    
-
-    await client.say(embed=embed) #send_message(author, embed=embed)
-
-
-
-
-@client.command()
-async def say(*args):
-    output = ' '
-    for word in args:
-        output += word
-        output += ' '
-    await client.say(output) 
+#@client.command(pass_context=True)
     
 client.loop.create_task(change_status())
 client.run(os.environ['BOT_TOKEN'])    
