@@ -9,7 +9,7 @@ import os
 from discord.utils import get
 
 import lists
-from lists import reactionsdict
+from lists import *
 
 client = commands.Bot(command_prefix = '-!')
 client.remove_command('help')
@@ -72,7 +72,7 @@ async def on_message(message):
         await get_reaction(message,"123jessie")
     
     if chance == 2: 
-        get_reaction(message,"123emoji")
+        await get_reaction(message,"123emoji")
 
 async def get_reaction(message,i):
     index = randint(0,len(reactionsdict[inmsg[i]]) - 1)
