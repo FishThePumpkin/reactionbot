@@ -15,32 +15,30 @@ client = commands.Bot(command_prefix = '-!')
 client.remove_command('help')
 status = ['Rocky', 'x', 'Rachel']
 
-reactions = ["wink","baka","toxic","<@547365819122712586>",":GWsocksBlobAngeryPing:",":GWsocksThonkeryPing:",":GWcmeisterPeepoShrug:",":GWchadThink:"]
-
 inmsg = {
     "wink": "lstwink",
     "baka": "lsttsun",
-    #"?": "lstquestion",
+    "?": "lstquestion",
     "toxic": "lsttoxic",
     "<@547365819122712586>": "lstping",
     ":GWsocksBlobAngeryPing:": "lstdash",
     ":GWsocksThonkeryPing:": "lstdash",
     ":GWcmeisterPeepoShrug:": "lstdash",
-    ":GWchadThink:": "lstdash"
+    ":GWchadThink:": "lstdash",
+    "123hearts": "lsthearts",
+    "123emoji", "lstemoji",
+    "123jessie", "lstjessie"
+}
+IDs = {
+    "Jessie": "290419231734890497",
+    "Vivian": "346924005997019139",
+    "Owner": "246437474463776769",
+    "Bot": "556089994708779033",
+    "Rachel": "318366307169075201",
+    "Labib": "378820414350295040",
+    "Trung": "328345368494342155"
 }
 
-#lstemoji = lstjessie = lsthearts = lstoops = lstwink = lstthink = lstzzz = lsttsun = lstquestion = lsttoxic = lstping = lstdash = lstgay 
-#namelst = []
-#lstlst = [lstemoji,lstjessie,lsthearts,lstoops,lstwink,lstthink,lstzzz,lsttsun,lstquestion,lsttoxic,lstping,lstdash,lstgay]
-#namelst = ["lstemoji","lstjessie","lsthearts","lstoops","lstwink","lstthink","lstzzz","lsttsun","lstquestion","lsttoxic","lstping","lstdash","lstgay"]
-#alllst = [allemoji,alljessie,allhearts,alloops,allwink,allthink,allzzz,alltsun,allquestion,alltoxic,allping,alldash,allgay]
-
-#for i in reactionsdict:
-    #namelst.append(i)
-
-#print(namelst)
- #   lstlst[i] = reactionsdict[namelst[i]]
-  #  alllst[i] = len(lstlst[i]) - 1
 
 async def change_status():
     await client.wait_until_ready()
@@ -50,9 +48,7 @@ async def change_status():
         current_status = next(msgs)
         await client.change_presence(game=discord.Game(name=current_status))
         await asyncio.sleep(2)
-       
-
-    
+          
 @client.event
 async def on_message(message):
     author = message.author
@@ -63,28 +59,20 @@ async def on_message(message):
             await get_reaction(message,i)
             
     if message.content == '?':
-        index = randint(0, len(reactionsdict["lstquestion"]) - 1)
-        return await client.add_reaction(message, reactionsdict["lstquestion"][index])
+        await get_reaction(message,"?")
          
-    elif author.id == "318366307169075201" or author.id == "328345368494342155":               #318366307169075201
-        index = randint(0, len(reactionsdict["lsthearts"]) - 1)
-        return await client.add_reaction(message, reactionsdict["lsthearts"][index])
+    elif author.id == IDs["Rachel"] or author.id == IDs["Trung"]:               #318366307169075201
+        await get_reaction(message,"123hearts")
     
-    elif author.id == "290419231734890497":
-        index = randint(0, len(reactionsdict["lstjessie"]) - 1)
-        await client.add_reaction(message,reactionsdict["lstjessie"][index])
+    elif author.id == IDs["Jessie"]:
+        await get_reaction(message,"123jessie")
         await client.add_reaction(message,reactionsdict["lstgay"][0])
         await client.add_reaction(message,reactionsdict["lstgay"][1])
         await client.add_reaction(message,reactionsdict["lstgay"][2])
-        index = randint(0, len(reactionsdict["lstjessie"]) - 1)
-        return await client.add_reaction(message,reactionsdict["lstjessie"][index])
+        await get_reaction(message,"123jessie")
     
     if chance == 2: 
-        index = randint(0, len(reactionsdict["lstemoji"]) - 1) 
-        if message.content.find(':okay_hand:'):
-             for x in client.get_all_emojis():
-                if x.id == reactionsdict["lstemoji"][index]:
-                    return await client.add_reaction(message, x)  
+        get_reaction(message,"123emoji")
 
 async def get_reaction(message,i):
     index = randint(0,len(reactionsdict[inmsg[i]]) - 1)
