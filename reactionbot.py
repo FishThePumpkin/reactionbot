@@ -15,31 +15,6 @@ client = commands.Bot(command_prefix = '-!')
 client.remove_command('help')
 status = ['Rocky', 'x', 'Rachel']
 
-#import listss
-lstemoji = reactionsdict["lstemoji"]
-lstuniemoji = []
-lstjessie = reactionsdict["lstjessie"]
-lsthearts = reactionsdict["lsthearts"]
-lstoops = reactionsdict["lstoops"]
-lstwink = reactionsdict["lstwink"]
-lstthink = reactionsdict["lstthink"]
-lstzzz = ['\U0001F634']
-lsttsun = ['448817502089379852']
-lstquestion = ['\U00002753']
-lsttoxic = ['547680967397998642']
-lstping = ['547683507690799114','547683506579439618','547683506625445888']
-lstdash = ['551731555597549588']
-lstgay = ['\U0001F1EC','\U0001F1E6','\U0001F1FE']
-allwink = len(lstwink) - 1 
-alltsun = len(lsttsun) - 1 
-allquestion = len(lstquestion) - 1 
-alltoxic = len(lsttoxic) - 1 
-allping = len(lstping) - 1
-alldash = len(lstdash) - 1 
-allhearts = len(lsthearts) - 1 
-allemoji = len(lstemoji) - 1 
-alljessie = len(lstjessie) - 1
-
 reactions = ["wink","baka","toxic","<@547365819122712586>",":GWsocksBlobAngeryPing:",":GWsocksThonkeryPing:",":GWcmeisterPeepoShrug:",":GWchadThink:"]
 
 inmsg = {
@@ -94,15 +69,6 @@ async def on_message(message):
                     if x.id == reactionsdict[inmsg[i]][index]:
                         return await client.add_reaction(message, x)
         
-    if 'wink' in message.content:
-        wink = randint(0, allwink)
-        return await client.add_reaction(message, lstwink[wink])
-    elif 'baka' in message.content:
-        tsun = randint(0, alltsun)
-        if message.content.find('EMOJI_NAME'):
-             for x in client.get_all_emojis():
-                if x.id == lsttsun[tsun]:
-                    return await client.add_reaction(message, x)
     elif message.content == '?':
         question = randint(0, allquestion)
         return await client.add_reaction(message, lstquestion[question])
