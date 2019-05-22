@@ -50,7 +50,7 @@ inmsg = {
     "<@547365819122712586>": "lstping",
     ":GWsocksBlobAngeryPing:": "lstdash",
     ":GWsocksThonkeryPing:": "lstdash",
-    ":GWcmeisterPeepoShrug:", "lstdash",
+    ":GWcmeisterPeepoShrug:": "lstdash",
     ":GWchadThink:", "lstdash"
 }
 
