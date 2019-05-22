@@ -10,35 +10,12 @@ from discord.utils import get
 
 import lists
 from lists import *
+import permissions
+from permissions import IDs
 
 client = commands.Bot(command_prefix = '-!')
 client.remove_command('help')
 status = ['Rocky', 'x', 'Rachel']
-
-inmsg = {
-    "wink": "lstwink",
-    "baka": "lsttsun",
-    "?": "lstquestion",
-    "toxic": "lsttoxic",
-    "<@547365819122712586>": "lstping",
-    ":GWsocksBlobAngeryPing:": "lstdash",
-    ":GWsocksThonkeryPing:": "lstdash",
-    ":GWcmeisterPeepoShrug:": "lstdash",
-    ":GWchadThink:": "lstdash",
-    "123hearts": "lsthearts",
-    "123emoji": "lstemoji",
-    "123jessie": "lstjessie"
-}
-IDs = {
-    "Jessie": "290419231734890497",
-    "Vivian": "346924005997019139",
-    "Owner": "246437474463776769",
-    "Bot": "556089994708779033",
-    "Rachel": "318366307169075201",
-    "Labib": "378820414350295040",
-    "Trung": "328345368494342155"
-}
-
 
 async def change_status():
     await client.wait_until_ready()
