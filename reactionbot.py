@@ -60,7 +60,7 @@ async def on_message(message):
     mess = message.content.lower()
     for i in inmsg:
         if i in mess:
-            get_reaction(message,i)
+            await get_reaction(message,i)
             
     if message.content == '?':
         index = randint(0, len(reactionsdict["lstquestion"]) - 1)
