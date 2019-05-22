@@ -92,9 +92,9 @@ async def get_reaction(message,i):
        return await client.add_reaction(message,reactionsdict[inmsg[i]])
     except:
         if message.content.find('EMOJI_NAME'):
-        for x in client.get_all_emojis():
-            if x.id == reactionsdict[inmsg[i]][index]
-            return await client.add_reaction(message, x)
+            for x in client.get_all_emojis():
+                if x.id == reactionsdict[inmsg[i]][index]
+                return await client.add_reaction(message, x)
         
         
 @client.command()
