@@ -13,3 +13,18 @@ reactionsdict = {
 	"lstdash": ['551731555597549588'],
 	"lstgay": ['\U0001F1EC','\U0001F1E6','\U0001F1FE']
   }
+
+inmsg = {
+    "wink": "lstwink",
+    "baka": "lsttsun",
+    "?": "lstquestion",
+    "toxic": "lsttoxic",
+    "<@547365819122712586>": "lstping",
+    ":GWsocksBlobAngeryPing:": "lstdash",
+    ":GWsocksThonkeryPing:": "lstdash",
+    ":GWcmeisterPeepoShrug:": "lstdash",
+    ":GWchadThink:": "lstdash",
+    "123hearts": "lsthearts",
+    "123emoji": "lstemoji",
+    "123jessie": "lstjessie"
+}
