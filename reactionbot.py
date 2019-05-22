@@ -15,7 +15,7 @@ client = commands.Bot(command_prefix = '-!')
 client.remove_command('help')
 status = ['Rocky', 'x', 'Rachel']
 
-#import lists
+#import listss
 lstemoji = reactionsdict["lstemoji"]
 lstuniemoji = []
 lstjessie = reactionsdict["lstjessie"]
