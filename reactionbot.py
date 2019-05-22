@@ -70,27 +70,27 @@ async def on_message(message):
                         return await client.add_reaction(message, x)
         
     if message.content == '?':
-        question = randint(0, allquestion)
-        return await client.add_reaction(message, lstquestion[question])
+        index = randint(0, len(reactionsdict["lstquestion"]) - 1)
+        return await client.add_reaction(message, reactionsdict["lstquestion"][index])
          
     elif author.id == "318366307169075201" or author.id == "328345368494342155":               #318366307169075201
-        heart = randint(0, allhearts)
-        return await client.add_reaction(message, lsthearts[heart])
+        index = randint(0, len(reactionsdict["lsthearts"]) - 1)
+        return await client.add_reaction(message, reactionsdict["lsthearts"][index])
     
     elif author.id == "290419231734890497":
+        index = randint(0, len(reactionsdict["lstjessie"]) - 1)
+        await client.add_reaction(message,reactionsdict["lstjessie"][index])
+        await client.add_reaction(message,reactionsdict["lstgay"][0])
+        await client.add_reaction(message,reactionsdict["lstgay"][1])
+        await client.add_reaction(message,reactionsdict["lstgay"][2])
         jessie = randint(0,alljessie)
-        await client.add_reaction(message,lstjessie[jessie])
-        await client.add_reaction(message,lstgay[0])
-        await client.add_reaction(message,lstgay[1])
-        await client.add_reaction(message,lstgay[2])
-        jessie = randint(0,alljessie)
-        return await client.add_reaction(message,lstjessie[jessie])
+        return await client.add_reaction(message,reactionsdict["lstjessie"][index])
     
     if chance == 2: 
-        emoji = randint(0, allemoji) 
+        index = randint(0, len(reactionsdict["lstemoji"]) - 1) 
         if message.content.find(':okay_hand:'):
              for x in client.get_all_emojis():
-                if x.id == lstemoji[emoji]:
+                if x.id == reactionsdict["lstemoji"][index]:
                     return await client.add_reaction(message, x)  
     
 @client.command()
