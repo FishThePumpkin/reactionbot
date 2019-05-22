@@ -8,6 +8,8 @@ from random import *
 import os
 from discord.utils import get
 
+import lists.py
+
 client = commands.Bot(command_prefix = '-!')
 client.remove_command('help')
 status = ['Rocky', 'x', 'Rachel']
