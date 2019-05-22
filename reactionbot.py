@@ -30,15 +30,15 @@ inmsg = {
 }
 
 #lstemoji = lstjessie = lsthearts = lstoops = lstwink = lstthink = lstzzz = lsttsun = lstquestion = lsttoxic = lstping = lstdash = lstgay 
-namelst = []
+#namelst = []
 #lstlst = [lstemoji,lstjessie,lsthearts,lstoops,lstwink,lstthink,lstzzz,lsttsun,lstquestion,lsttoxic,lstping,lstdash,lstgay]
 #namelst = ["lstemoji","lstjessie","lsthearts","lstoops","lstwink","lstthink","lstzzz","lsttsun","lstquestion","lsttoxic","lstping","lstdash","lstgay"]
 #alllst = [allemoji,alljessie,allhearts,alloops,allwink,allthink,allzzz,alltsun,allquestion,alltoxic,allping,alldash,allgay]
 
-for i in reactionsdict:
-    namelst.append(i)
+#for i in reactionsdict:
+    #namelst.append(i)
 
-print(namelst)
+#print(namelst)
  #   lstlst[i] = reactionsdict[namelst[i]]
   #  alllst[i] = len(lstlst[i]) - 1
 
@@ -58,7 +58,7 @@ async def on_message(message):
     author = message.author
     chance = randint(1,7)
     mess = message.content.lower()
-    for i in reactions:
+    for i in inmsg:
         if i in mess:
             index = randint(0,len(reactionsdict[inmsg[i]]) - 1)
             try:
