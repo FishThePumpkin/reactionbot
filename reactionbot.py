@@ -60,15 +60,8 @@ async def on_message(message):
     mess = message.content.lower()
     for i in inmsg:
         if i in mess:
-            index = randint(0,len(reactionsdict[inmsg[i]]) - 1)
-            try:
-                return await client.add_reaction(message,reactionsdict[inmsg[i]])
-            except:
-                if message.content.find('EMOJI_NAME'):
-                 for x in client.get_all_emojis():
-                    if x.id == reactionsdict[inmsg[i]][index]:
-                        return await client.add_reaction(message, x)
-        
+            get_reaction(message,i)
+            
     if message.content == '?':
         index = randint(0, len(reactionsdict["lstquestion"]) - 1)
         return await client.add_reaction(message, reactionsdict["lstquestion"][index])
@@ -92,7 +85,18 @@ async def on_message(message):
              for x in client.get_all_emojis():
                 if x.id == reactionsdict["lstemoji"][index]:
                     return await client.add_reaction(message, x)  
-    
+
+async def get_reaction(message,i):
+    index = randint(0,len(reactionsdict[inmsg[i]]) - 1)
+    try:
+        return await client.add_reaction(message,reactionsdict[inmsg[i]]
+    except:
+        if message.content.find('EMOJI_NAME'):
+        for x in client.get_all_emojis():
+            if x.id == reactionsdict[inmsg[i]][index]
+            return await client.add_reaction(message, x)
+        
+        
 @client.command()
 async def ping():
     await client.say('Pong!')
