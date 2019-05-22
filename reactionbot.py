@@ -83,7 +83,7 @@ async def on_message(message):
         await client.add_reaction(message,reactionsdict["lstgay"][0])
         await client.add_reaction(message,reactionsdict["lstgay"][1])
         await client.add_reaction(message,reactionsdict["lstgay"][2])
-        jessie = randint(0,alljessie)
+        index = randint(0, len(reactionsdict["lstjessie"]) - 1)
         return await client.add_reaction(message,reactionsdict["lstjessie"][index])
     
     if chance == 2: 
