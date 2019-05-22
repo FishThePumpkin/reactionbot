@@ -40,6 +40,15 @@ allhearts = len(lsthearts) - 1
 allemoji = len(lstemoji) - 1 
 alljessie = len(lstjessie) - 1
 
+reactions = ["wink","baka","toxic","<@547365819122712586>",":GWsocksBlobAngeryPing:"
+
+inmsg = {
+    "wink": "lstwink",
+    "baka": "lsttsun",
+    #"?": "lstquestion",
+    "toxic":
+}
+
 #lstemoji = lstjessie = lsthearts = lstoops = lstwink = lstthink = lstzzz = lsttsun = lstquestion = lsttoxic = lstping = lstdash = lstgay 
 namelst = []
 #lstlst = [lstemoji,lstjessie,lsthearts,lstoops,lstwink,lstthink,lstzzz,lsttsun,lstquestion,lsttoxic,lstping,lstdash,lstgay]
