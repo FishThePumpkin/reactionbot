@@ -60,7 +60,7 @@ async def on_message(message):
     mess = message.content.lower()
     for i in reactions:
         if i in mess:
-            index = randint(0,len(reactionsdict[inmsg[i]]))
+            index = randint(0,len(reactionsdict[inmsg[i]]) - 1)
             try:
                 return await client.add_reaction(message,reactionsdict[inmsg[i]])
             except:
