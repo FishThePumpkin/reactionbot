@@ -32,25 +32,27 @@ async def on_message(message):
     author = message.author
     chance = randint(1,7)
     mess = message.content.lower()
-    for i in inmsg:
-        if i in mess:
-            return await get_reaction(message,i)
-            
-    if message.content == '?':
-        return await get_reaction(message,"?")
-         
-    elif author.id == IDs["Rachel"] or author.id == IDs["Trung"]:               #318366307169075201
-        return await get_reaction(message,"123hearts")
     
-    elif author.id == IDs["Jessie"]:
+    if chance == 2: 
+        await get_reaction(message,"123emoji")
+             
+    if author.id == IDs["Rachel"] or author.id == IDs["Trung"]:               #318366307169075201
+        await get_reaction(message,"123hearts")
+    
+    if author.id == IDs["Jessie"]:
         await get_reaction(message,"123jessie")
         await client.add_reaction(message,reactionsdict["lstgay"][0])
         await client.add_reaction(message,reactionsdict["lstgay"][1])
         await client.add_reaction(message,reactionsdict["lstgay"][2])
         return await get_reaction(message,"123jessie")
     
-    if chance == 2: 
-        return await get_reaction(message,"123emoji")
+    for i in inmsg:
+        if message.content == "?":
+            await get_reaction(message,"?")
+        elif i in mess:
+            await get_reaction(message,i)
+    
+
 
 async def get_reaction(message,i):
     index = randint(0,len(reactionsdict[inmsg[i]]) - 1)
