@@ -48,6 +48,8 @@ namelst = []
 
 for i in reactionsdict:
     namelst.append(i)
+
+print(namelst)
  #   lstlst[i] = reactionsdict[namelst[i]]
   #  alllst[i] = len(lstlst[i]) - 1
 
