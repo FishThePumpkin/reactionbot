@@ -26,8 +26,8 @@ inmsg = {
     ":GWcmeisterPeepoShrug:": "lstdash",
     ":GWchadThink:": "lstdash",
     "123hearts": "lsthearts",
-    "123emoji", "lstemoji",
-    "123jessie", "lstjessie"
+    "123emoji": "lstemoji",
+    "123jessie": "lstjessie"
 }
 IDs = {
     "Jessie": "290419231734890497",
