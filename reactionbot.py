@@ -9,7 +9,7 @@ import os
 from discord.utils import get
 
 import lists
-from lists import *
+from lists import 
 import permissions
 from permissions import IDs
 
@@ -33,23 +33,23 @@ async def on_message(message):
     mess = message.content.lower()
     for i in inmsg:
         if i in mess:
-            await get_reaction(message,i)
+            return await get_reaction(message,i)
             
     if message.content == '?':
-        await get_reaction(message,"?")
+        return await get_reaction(message,"?")
          
     elif author.id == IDs["Rachel"] or author.id == IDs["Trung"]:               #318366307169075201
-        await get_reaction(message,"123hearts")
+        return await get_reaction(message,"123hearts")
     
     elif author.id == IDs["Jessie"]:
         await get_reaction(message,"123jessie")
         await client.add_reaction(message,reactionsdict["lstgay"][0])
         await client.add_reaction(message,reactionsdict["lstgay"][1])
         await client.add_reaction(message,reactionsdict["lstgay"][2])
-        await get_reaction(message,"123jessie")
+        return await get_reaction(message,"123jessie")
     
     if chance == 2: 
-        await get_reaction(message,"123emoji")
+        return await get_reaction(message,"123emoji")
 
 async def get_reaction(message,i):
     index = randint(0,len(reactionsdict[inmsg[i]]) - 1)
