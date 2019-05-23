@@ -49,6 +49,23 @@ async def on_message(message):
         else:
             return await get_reaction(message,"123jessie")
     
+    if chance == 19:
+            if randomstatus == 0:
+                randomstatus = 1
+                await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
+                randomcounter += 1
+                return
+            
+    if randomstatus == 1:
+            try:
+                await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
+                randomcounter += 1
+                return
+            except IndexError:
+                randomstatus = 0
+                randomcounter = 0
+                
+               
     if message.content == "?":
         return await get_reaction(message,"123?")
     
@@ -59,23 +76,7 @@ async def on_message(message):
     if chance in range(1,6): 
         return await get_reaction(message,"123emoji")
     
-    if author.id == IDs["Owner"]:
-        if chance == 19:
-            if randomstatus == 0:
-                randomstatus = 1
-                await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
-                randomcounter += 1
-                return
-            
-        if randomstatus == 1:
-                try:
-                    await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
-                    randomcounter += 1
-                    return
-                except IndexError:
-                    randomstatus = 0
-                    randomcounter = 0
-                    return
+        
     
 
 
