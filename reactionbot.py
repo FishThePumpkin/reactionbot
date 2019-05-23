@@ -72,8 +72,9 @@ async def on_message(message):
                     await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
                     randomcounter += 1
                     return
-                except:
+                except IndexError:
                     randomstatus = 0
+                    randomcounter = 0
                     return
     
 
