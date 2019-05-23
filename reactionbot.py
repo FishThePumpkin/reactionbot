@@ -40,14 +40,6 @@ async def on_message(message):
     if author.id == IDs["Rachel"] or author.id == IDs["Trung"]:               #318366307169075201
         return await get_reaction(message,"123hearts")
     
-    if author.id == IDs["Jessie"]:
-        chance = randint(1,15)
-        if chance == 3:           
-            await client.add_reaction(message,reactionsdict["lstgay"][0])
-            await client.add_reaction(message,reactionsdict["lstgay"][1])
-            return await client.add_reaction(message,reactionsdict["lstgay"][2])
-        else:
-            return await get_reaction(message,"123jessie")
     
     if chance == 19:
             if randomstatus == 0:
@@ -65,6 +57,15 @@ async def on_message(message):
                 randomstatus = 0
                 randomcounter = 0
                 
+    if author.id == IDs["Jessie"]:
+        chance = randint(1,15)
+        if chance == 3:           
+            await client.add_reaction(message,reactionsdict["lstgay"][0])
+            await client.add_reaction(message,reactionsdict["lstgay"][1])
+            return await client.add_reaction(message,reactionsdict["lstgay"][2])
+        else:
+            return await get_reaction(message,"123jessie")       
+        
                
     if message.content == "?":
         return await get_reaction(message,"123?")
