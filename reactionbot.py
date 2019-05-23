@@ -17,6 +17,8 @@ from permissions import IDs
 client = commands.Bot(command_prefix = '-!')
 client.remove_command('help')
 status = ['Rocky', 'x', 'Rachel']
+randomstatus = 0
+randomcounter = 0
 
 async def change_status():
     await client.wait_until_ready()
@@ -30,8 +32,10 @@ async def change_status():
 @client.event
 async def on_message(message):
     author = message.author
-    chance = randint(1,7)
+    chance = randint(1,20)
     mess = message.content.lower()
+    global randomstatus
+    global randomcounter
                
     if author.id == IDs["Rachel"] or author.id == IDs["Trung"]:               #318366307169075201
         return await get_reaction(message,"123hearts")
@@ -52,10 +56,19 @@ async def on_message(message):
         if i in mess:
             return await get_reaction(message,i)
         
-    if chance == 2: 
+    if chance in range(1,6): 
         return await get_reaction(message,"123emoji")
     
-
+    if author.id == IDs["Owner"]:
+        if chance == 19:
+            if randomstatus == 1:
+                await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
+                randomcounter += 1
+                return
+            else:
+                await client.add_reaction(message,reactiondict["lstrandomlol"][randomcounter])
+                randomcounter += 1
+                return
     
 
 
