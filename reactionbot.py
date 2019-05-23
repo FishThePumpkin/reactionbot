@@ -32,7 +32,7 @@ async def change_status():
 @client.event
 async def on_message(message):
     author = message.author
-    chance = randint(1,20)
+    chance = randint(1,200)
     mess = message.content.lower()
     global randomstatus
     global randomcounter
@@ -41,7 +41,7 @@ async def on_message(message):
         return await get_reaction(message,"123hearts")
     
     
-    if chance == 19:
+    if chance in range(1,10):
             if randomstatus == 0:
                 randomstatus = 1
                 await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
@@ -63,7 +63,7 @@ async def on_message(message):
             await client.add_reaction(message,reactionsdict["lstgay"][0])
             await client.add_reaction(message,reactionsdict["lstgay"][1])
             return await client.add_reaction(message,reactionsdict["lstgay"][2])
-        else:
+        elif chance in range(1,3):
             return await get_reaction(message,"123jessie")       
         
                
@@ -74,7 +74,7 @@ async def on_message(message):
         if i in mess:
             return await get_reaction(message,i)
         
-    if chance in range(1,6): 
+    if chance in range(1,10): 
         return await get_reaction(message,"123emoji")
     
         
