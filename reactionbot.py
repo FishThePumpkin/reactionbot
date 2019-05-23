@@ -41,7 +41,7 @@ async def on_message(message):
         return await get_reaction(message,"123hearts")
     
     
-    if chance in range(1,10):
+    if chance in range(1,3):
             if randomstatus == 0:
                 randomstatus = 1
                 await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
