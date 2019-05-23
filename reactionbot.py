@@ -61,18 +61,20 @@ async def on_message(message):
     
     if author.id == IDs["Owner"]:
         if chance == 19:
-            if randomstatus == 1:
-            #    try:
-                await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
-                randomcounter += 1
-                return
-               # except:
-                  #  randomstatus = 0
-            else:
+            if randomstatus == 0:
                 randomstatus = 1
                 await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
                 randomcounter += 1
                 return
+            
+        if randomstatus == 1:
+                try:
+                    await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
+                    randomcounter += 1
+                    return
+                except:
+                    randomstatus = 0
+                    return
     
 
 
