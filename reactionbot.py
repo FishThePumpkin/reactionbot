@@ -48,7 +48,7 @@ async def on_message(message):
                 randomcounter += 1
                 return
             
-    elif chance in range(3,4):
+    elif chance in range(3,53):
             if randomstatus == 0:
                 randomstatus = 2
                 for i in range(0,3):
