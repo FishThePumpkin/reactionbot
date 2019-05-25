@@ -32,6 +32,7 @@ async def change_status():
 async def on_message(message):
     author = message.author
     chance = randint(1,200)
+    print(chance)
     mess = message.content.lower()
     global randomstatus
     global randomcounter
