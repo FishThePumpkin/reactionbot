@@ -41,19 +41,18 @@ async def on_message(message):
         return await get_reaction(message,"123hearts")
     
     
-    if chance in range(1,2):
+    if chance in range(1,4):
             if randomstatus == 0:
                 randomstatus = 1
                 await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
                 randomcounter += 1
                 return
             
-    elif chance in range(3,53):
+    elif chance in range(5,8):
             if randomstatus == 0:
                 randomstatus = 2
                 for i in range(0,4):
-                    await client.add_reaction(message,reactionsdict["lstnicevoice"][i])
-                    
+                    await client.add_reaction(message,reactionsdict["lstnicevoice"][i])           
                 randomcounter = 4
                 return
             
