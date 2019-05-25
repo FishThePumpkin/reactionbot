@@ -31,7 +31,7 @@ async def change_status():
 @client.event
 async def on_message(message):
     author = message.author
-    chance = randint(1,100)
+    chance = randint(1,200)
     mess = message.content.lower()
     global randomstatus
     global randomcounter
@@ -40,16 +40,33 @@ async def on_message(message):
         return await get_reaction(message,"123hearts")
     
     
-    if chance in range(1,3):
+    if chance in range(1,2):
             if randomstatus == 0:
                 randomstatus = 1
                 await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
                 randomcounter += 1
                 return
             
+    elif chance in range(3,4):
+            if randomstatus == 0:
+                randomstatus = 2
+                for i in range(0,3):
+                    await client.add_reaction(message,reactionsdict["lstnicevoice"][randomcounter])
+                    randomcounter += 1
+                return
+            
     if randomstatus == 1:
             try:
                 await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
+                randomcounter += 1
+                return
+            except IndexError:
+                randomstatus = 0
+                randomcounter = 0
+                
+    elif randomstatus == 2:
+            try:
+                await client.add_reaction(message,reactionsdict["lstnicevoice"][randomcounter])
                 randomcounter += 1
                 return
             except IndexError:
@@ -62,7 +79,7 @@ async def on_message(message):
             await client.add_reaction(message,reactionsdict["lstgay"][0])
             await client.add_reaction(message,reactionsdict["lstgay"][1])
             return await client.add_reaction(message,reactionsdict["lstgay"][2])
-        elif chance in range(1,5):
+        elif chance in range(1,20):
             return await get_reaction(message,"123jessie")       
         
                
@@ -73,7 +90,7 @@ async def on_message(message):
         if i in mess:
             return await get_reaction(message,i)
         
-    if chance in range(1,10): 
+    if chance in range(150,200): 
         return await get_reaction(message,"123emoji")
     
         
