@@ -48,7 +48,9 @@ async def on_message(message):
                 randomcounter += 1
                 return
             
-    elif chance in range(5,8):
+    if author.id == IDs["Vivian"]:
+        chance = randint(1,10)
+        if chance in range(1,2):
             if randomstatus == 0:
                 randomstatus = 2
                 for i in range(0,4):
