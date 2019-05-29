@@ -12,6 +12,7 @@ import lists
 from lists import *
 import permissions
 from permissions import IDs
+#
 
 client = commands.Bot(command_prefix = '-!')
 client.remove_command('help')
