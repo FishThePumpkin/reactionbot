@@ -42,7 +42,7 @@ async def on_message(message):
         return await get_reaction(message,"123hearts")
     
     
-    if chance in range(1,4):
+    if chance in range(1,2):
             if randomstatus == 0:
                 randomstatus = 1
                 await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
@@ -50,7 +50,7 @@ async def on_message(message):
                 return
             
     if author.id == IDs["Vivian"]:
-        chance = randint(1,10)
+        chance = randint(1,100)
         if chance in range(1,2):
             if randomstatus == 0:
                 randomstatus = 2
