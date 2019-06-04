@@ -58,7 +58,16 @@ async def on_message(message):
                     await client.add_reaction(message,reactionsdict["lstnicevoice"][i])           
                 randomcounter = 4
                 return
-            
+    if author.id == IDs["Charlie"]:
+        chance = randint(1,100)
+        if chance in range(1,2):
+            if randomstatus == 0:
+                randomstatus = 3
+                for i in range(0,4):
+                    await client.add_reaction(message,reactionsdict["lstded"][i])           
+                randomcounter = 4
+                return
+
     if randomstatus == 1:
             try:
                 await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
@@ -71,6 +80,15 @@ async def on_message(message):
     elif randomstatus == 2:
             try:
                 await client.add_reaction(message,reactionsdict["lstnicevoice"][randomcounter])
+                randomcounter += 1
+                return
+            except IndexError:
+                randomstatus = 0
+                randomcounter = 0
+                
+    elif randomstatus == 3:
+            try:
+                await client.add_reaction(message,reactionsdict["lstded"][randomcounter])
                 randomcounter += 1
                 return
             except IndexError:
