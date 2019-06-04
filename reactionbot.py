@@ -58,8 +58,9 @@ async def on_message(message):
                     await client.add_reaction(message,reactionsdict["lstnicevoice"][i])           
                 randomcounter = 4
                 return
+            
     if author.id == IDs["Charlie"]:
-        chance = randint(1,100)
+        chance = randint(1,10)
         if chance in range(1,2):
             if randomstatus == 0:
                 randomstatus = 3
