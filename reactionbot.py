@@ -54,7 +54,7 @@ async def on_message(message):
         if chance in range(1,2):
             if randomstatus == 0:
                 randomstatus = 2
-                for i in range(0,3):
+                for i in range(0,4):
                     await client.add_reaction(message,reactionsdict["lstnicevoice"][i])           
                 randomcounter = 4
                 return
@@ -64,7 +64,7 @@ async def on_message(message):
         if chance in range(1,2):
             if randomstatus == 0:
                 randomstatus = 3
-                for i in range(0,3):
+                for i in range(0,4):
                     await client.add_reaction(message,reactionsdict["lstded"][i])           
                 randomcounter = 4
                 return
