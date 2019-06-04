@@ -91,6 +91,7 @@ async def on_message(message):
             except IndexError:
                 randomstatus = 0
                 randomcounter = 0
+                return
                 
     elif randomstatus == 2:
             try:
@@ -100,6 +101,7 @@ async def on_message(message):
             except IndexError:
                 randomstatus = 0
                 randomcounter = 0
+                return
                 
     elif randomstatus == 3:
             try:
@@ -109,6 +111,7 @@ async def on_message(message):
             except IndexError:
                 randomstatus = 0
                 randomcounter = 0
+                return
                 
     if author.id == IDs["Jessie"]:
         chance = randint(1,50)
