@@ -50,8 +50,8 @@ async def on_message(message):
                 return
             
     if author.id == IDs["Vivian"]:
-        chance = randint(1,100)
-        if chance in range(1,2):
+        chance = randint(100,200)
+        if chance in range(199,200):
             if randomstatus == 0:
                 randomstatus = 2
                 for i in range(0,4):
@@ -60,8 +60,8 @@ async def on_message(message):
                 return
             
     if author.id == IDs["Charlie"]:
-        chance = randint(1,100)
-        if chance in range(1,2):
+        chance = randint(100,200)
+        if chance in range(199,200):
             if randomstatus == 0:
                 randomstatus = 3
                 for i in range(0,4):
