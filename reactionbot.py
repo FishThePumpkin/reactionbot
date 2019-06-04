@@ -68,7 +68,13 @@ async def on_message(message):
                     await client.add_reaction(message,reactionsdict["lstded"][i])           
                 randomcounter = 4
                 return
-
+    if authod.id == IDs["Rocky"]:
+        chance = randint(1,10)
+        if chance in range(1,2):
+            for i in range(0, len(reactionsdict["lstrxr"]) - 1):
+                await client.add_reaction(message,reactionsdict["lstrxr"][i])
+            return
+        
     if randomstatus == 1:
             try:
                 await client.add_reaction(message,reactionsdict["lstrandomlol"][randomcounter])
