@@ -60,7 +60,7 @@ async def on_message(message):
                 return
             
     if author.id == IDs["Charlie"]:
-        chance = randint(1,10)
+        chance = randint(1,100)
         if chance in range(1,2):
             if randomstatus == 0:
                 randomstatus = 3
