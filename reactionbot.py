@@ -68,10 +68,18 @@ async def on_message(message):
                     await client.add_reaction(message,reactionsdict["lstded"][i])           
                 randomcounter = 4
                 return
+            
     if author.id == IDs["Rocky"]:
         chance = randint(1,10)
         if chance in range(1,2):
             for i in range(0, len(reactionsdict["lstrxr"]) - 1):
+                await client.add_reaction(message,reactionsdict["lstrxr"][i])
+            return
+        
+    if author.id == IDs["Nomi"]:
+        chance = randint(1,1000)
+        if chance in range(1,2):
+            for i in range(0, len(reactionsdict["lstlips"]) - 1):
                 await client.add_reaction(message,reactionsdict["lstrxr"][i])
             return
         
