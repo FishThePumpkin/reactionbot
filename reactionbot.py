@@ -114,15 +114,21 @@ async def on_message(message):
                 return
                 
     if author.id == IDs["Jessie"]:
-        chance = randint(1,50)
+        chance = randint(1,100)
         if chance == 9:           
             await client.add_reaction(message,reactionsdict["lstgay"][0])
             await client.add_reaction(message,reactionsdict["lstgay"][1])
             return await client.add_reaction(message,reactionsdict["lstgay"][2])
-        elif chance in range(1,20):
+        elif chance in range(1,50):
             return await get_reaction(message,"123jessie")       
         
-               
+    if author.id == IDs["Blue"]:
+        chance = randint(1,20)
+        if chance == 11:
+            return await client.add_reaction(message,reactionsdict["lstblue"][0])
+    
+    
+    
     if message.content == "?":
         return await get_reaction(message,"123?")
     
