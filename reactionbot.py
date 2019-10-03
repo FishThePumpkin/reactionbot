@@ -122,7 +122,7 @@ async def on_message(message):
         elif chance in range(1,50):
             return await get_reaction(message,"123jessie")       
         
-    if author.id == IDs["Owner"]:
+    if author.id == IDs["Blue"]:
         chance = randint(1,20)
         if chance == 11:
             return await get_reaction(message,"123blue")
