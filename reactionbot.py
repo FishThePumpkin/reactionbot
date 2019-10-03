@@ -125,7 +125,7 @@ async def on_message(message):
     if author.id == IDs["Owner"]:
         chance = randint(1,20)
         if chance == 11:
-            return await get_reaction(message,reactionsdict["lstblue"][0])
+            return await get_reaction(message,"123blue")
     
     
     
