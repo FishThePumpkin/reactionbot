@@ -19,7 +19,8 @@ reactionsdict = {
 	"lstded": ["🇩","🇪","🇦","🇩","🇮","🇳","🇸","🇮","🇩","🇪"],
 	"lstrxr": ["🇷"],
 	"lstlips": ["🇱","🇮","🇵","🇸","💋"],
-	"lstblue": ['629206716168273928']
+	"lstblue": ['629206716168273928'],
+	"lstb": ['🅱️']
   }
 
 inmsg = {
@@ -36,6 +37,7 @@ inmsg = {
     "123emoji": "lstemoji",
     "123jessie": "lstjessie",
     "123blue": "lstblue",
-    "123dicc": "lstdicc"
+    "123dicc": "lstdicc",
+    "123b": "lstb"
 }
 #
