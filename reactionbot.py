@@ -91,7 +91,12 @@ async def on_message(message):
             await client.add_reaction(message,reactionsdict["lsthorse"][rng])
         return
     
-   
+   if author.id == IDs["Shamoi"]:
+        chance = randint(1,20)
+        if chance in range(1,2):
+            await get_reaction(message,"123b")
+           
+        return
     
     
     if randomstatus == 1:
