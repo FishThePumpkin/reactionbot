@@ -84,7 +84,7 @@ async def on_message(message):
             return
         
     if author.id == IDs["Labib"]:
-        chance = randint(1,10)
+        chance = randint(1,50)
         if chance in range(1,2):
             await get_reaction(message,"123dicc")
             rng = randint(0,1)
