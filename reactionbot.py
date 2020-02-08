@@ -86,16 +86,11 @@ async def on_message(message):
     if author.id == IDs["Labib"]:
         chance = randint(1,10)
         if chance in range(1,2):
+            await get_reaction(message,"123dicc")
             rng = randint(0,1)
             await client.add_reaction(message,reactionsdict["lsthorse"][rng])
         return
     
-    if author.id == IDs["Owner"]:
-        chance = randint(1,10)
-        if chance in range(1,2):
-            rng = randint(0,1)
-            await client.add_reaction(message,reactionsdict["lsthorse"][rng])
-        return
     
     if randomstatus == 1:
             try:
